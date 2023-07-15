@@ -6,8 +6,22 @@ import {useEffect, useState} from "react";
 export default function(){
     
     const movieData = useMovieData("Spongebob");
+    const [searchQuery, setSearchQuery] = useState(""); 
+
+
 
     return (
-        <p>{movieData}</p>
+        <div className="body">
+            <div className="search-bar">
+                <form>
+                    <input className="input-bar grow" type="text" placeholder="Search for a movie"/>
+                    <button className="input-submit dim" type="submit">Search</button>
+                </form>
+            </div>
+            <div className="result-cards">
+
+            </div>
+        </div>
+        // <p>{movieData}</p>
     )
 }
