@@ -7,6 +7,7 @@ export default function(){
                 <h1 className="nav-title">MovieDome</h1>
                 <p className="title-description">Your go-to website for all things movies and TV shows!</p>
             </div>
+            
         </nav>
     )
 }

@@ -4,7 +4,6 @@ import {useEffect, useState} from "react";
 export default function(searchQuery){
 
     const [movieData, setMovieData] = useState([]);
-    var baseImgUrl = 'https://image.tmdb.org/t/p/w500'
 
     const options = {
         method: 'GET',
@@ -20,7 +19,8 @@ export default function(searchQuery){
             try{
                 const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`, options)
                 const data = await response.json();
-                setMovieData(data.results[1].overview)
+                setMovieData(data.results)
+                console.log(data.results)
             } catch (error){
                 console.error(error);
             } 
